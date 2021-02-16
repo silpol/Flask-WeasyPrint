@@ -1,3 +1,7 @@
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install python3.2 build-essential python3-dev python3-pip python3-setuptools python3-wheel python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
+
 sudo: false
 language: python
 python:
@@ -5,5 +9,5 @@ python:
     - "3.5"
     - "3.6"
     - "3.8"
-install: pip3 install tox-travis
-script: tox
+install: pip3 install WeasyPrint Flask tox-travis
+script: tox -p auto
