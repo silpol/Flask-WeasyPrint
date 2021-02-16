@@ -15,5 +15,5 @@ python:
     - "3.5"
     - "3.6"
     - "3.8"
-install: pip3 install WeasyPrint Flask tox-travis
+install: pip3 install WeasyPrint Flask cairocffi tox-travis
 script: tox -p auto
